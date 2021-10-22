@@ -6,6 +6,9 @@ The Agnos UI is built using micro frontends that exist in their own repositories
 
 This repository is for the hub that combines all Agnos micro frontends into a single, cohesive UI.
 
+> The drag-and-drop interface is built on the HTML5 canvas element. Other interesting canvas-based projects of mine are:
+> - [wasa - a simple canvas-based 2D game engine](https://github.com/Chieze-Franklin/wasa)
+
 # Running Locally
 
 - Clone this repository locally
