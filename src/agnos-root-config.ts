@@ -19,7 +19,7 @@ applications.forEach(registerApplication);
 
 // registerApplication({
 //   name: "@agnos/app2",
-//   app: () => System.import("http://localhost:8080/agnos-agnos-web-designer.js"),
+//   app: () => System.import("http://localhost:9001/agnos-agnos-web-designer.js"),
 //   activeWhen: (location) => location.pathname.startsWith('/app2'),
 // });
 
