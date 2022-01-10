@@ -22,6 +22,9 @@ applications.forEach(registerApplication);
 //   app: () => System.import("http://localhost:9001/agnos-agnos-web-designer.js"),
 //   activeWhen: (location) => location.pathname.startsWith('/app2'),
 // });
+window.addEventListener("nodeclick", () => {
+  console.log(">>>>>>>>got event")
+});
 
 
 layoutEngine.activate();
