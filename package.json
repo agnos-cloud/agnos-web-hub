@@ -51,7 +51,5 @@
     "single-spa-layout": "2.0.0",
     "single-spa-react": "^4.4.0"
   },
-  "for production": "\"type\": \"module\"",
-  "type": "module",
   "types": "dist/agnos-root-config.d.ts"
 }
