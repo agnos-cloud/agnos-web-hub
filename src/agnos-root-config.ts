@@ -21,9 +21,11 @@ applications.forEach(registerApplication);
 //   name: "@agnos/app2",
 //   app: () => System.import("http://localhost:9001/agnos-agnos-web-designer.js"),
 //   activeWhen: (location) => location.pathname.startsWith('/app2'),
+//   customProps: { some: "value" },
 // });
 window.addEventListener("nodeclick", () => {
   console.log(">>>>>>>>got event")
+  // TODO: whenever a component is clicked, register its application if not already registered
 });
 
 
