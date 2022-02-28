@@ -20,7 +20,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm install
-      - run: npm run build:webpack
+      - run: npm run build
       # The following is pinned to a known-good commit for safety purposes
       # https://github.com/jakejarvis/s3-sync-action
       - uses: jakejarvis/s3-sync-action@c33d061a8f4bddd78d8b5f9f4e5d2fd40a556980
