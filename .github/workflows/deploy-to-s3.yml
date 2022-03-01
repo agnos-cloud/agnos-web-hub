@@ -34,9 +34,9 @@ jobs:
           AWS_REGION: 'us-east-1'
           SOURCE_DIR: 'dist'
           DEST_DIR: 'agnos-web-hub'
-  pull-importmap-from-s3:
+  update-importmap:
     runs-on: ubuntu-18.04
-    name: Pull import-map from S3
+    name: Update importmap.json
     steps:
       - uses: actions/checkout@v2
       - uses: aws-actions/configure-aws-credentials@v1
@@ -45,3 +45,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'us-east-1'
       - run: aws s3 sync s3://agnos-heroku-code-deploy/importmap.json importmap.json
+      - run: ls -a
