@@ -3,7 +3,9 @@ import fs from "fs";
 import path from "path";
 
 const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
+console.log("=======================================");
 console.log(importMapFilePath);
+console.log("=======================================");
 const importMap = JSON.parse(fs.readFileSync(importMapFilePath));
 
 // *********************** put appropriate module name and url here
