@@ -1,12 +1,12 @@
 // Note that this file requires node@13.2.0 or higher (or the --experimental-modules flag)
 import fs from "fs";
 import path from "path";
-import imp from "./importmap.json";
+
+fs.readdirSync(path.resolve(process.cwd())).forEach(file => console.log(file));
 
 const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
 console.log("=======================================");
 console.log(importMapFilePath);
-console.log(imp);
 console.log(fs.lstatSync(importMapFilePath).isDirectory())
 console.log("=======================================");
 const importMap = JSON.parse(fs.readFileSync(importMapFilePath, { encoding:'utf8', flag:'r' }));
