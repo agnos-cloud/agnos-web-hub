@@ -34,6 +34,7 @@ jobs:
           AWS_REGION: 'us-east-1'
           SOURCE_DIR: 'dist'
           DEST_DIR: 'agnos-web-hub'
+
   update-importmap:
     runs-on: ubuntu-18.04
     name: Update importmap.json
