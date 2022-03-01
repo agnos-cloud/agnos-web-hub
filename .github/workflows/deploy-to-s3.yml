@@ -49,3 +49,4 @@ jobs:
         with:
           node-version: '13.2.0' # we need this version or higher to run update-importmap.mjs
       - run: chmod +x update-importmap.sh
+      - run: "./update-importmap.sh"
