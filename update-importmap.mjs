@@ -3,12 +3,6 @@ import fs from "fs";
 import path from "path";
 
 const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
-
-console.log("=======================================");
-console.log(importMapFilePath);
-console.log(fs.lstatSync(importMapFilePath).isDirectory())
-console.log(fs.lstatSync(path.resolve(process.cwd(), "server.js")).isDirectory())
-console.log("=======================================");
 const importMap = JSON.parse(fs.readFileSync(importMapFilePath, { encoding:'utf8', flag:'r' }));
 
 // *********************** put appropriate module name and url here
@@ -16,6 +10,8 @@ const moduleName = "@agnos/root-config";
 const url = "https://agnos-heroku-code-deploy.s3.amazonaws.com/agnos-web-hub/agnos-root-config.js";
 importMap.imports[moduleName] = url;
 importMap.imports.just_for_testing = "haha just testing.............."
+
+console.log(importMap)
 
 fs.writeFileSync(importMapFilePath, JSON.stringify(importMap, null, 2));
 
