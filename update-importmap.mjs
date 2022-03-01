@@ -9,9 +9,6 @@ const importMap = JSON.parse(fs.readFileSync(importMapFilePath, { encoding:'utf8
 const moduleName = "@agnos/root-config";
 const url = "https://agnos-heroku-code-deploy.s3.amazonaws.com/agnos-web-hub/agnos-root-config.js";
 importMap.imports[moduleName] = url;
-importMap.imports.just_for_testing = "haha just testing.............."
-
-console.log(importMap)
 
 fs.writeFileSync(importMapFilePath, JSON.stringify(importMap, null, 2));
 
