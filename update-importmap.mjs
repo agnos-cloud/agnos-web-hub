@@ -8,6 +8,7 @@ const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
 console.log("=======================================");
 console.log(importMapFilePath);
 console.log(fs.lstatSync(importMapFilePath).isDirectory())
+console.log(fs.lstatSync(path.resolve(process.cwd(), "server.js")).isDirectory())
 console.log("=======================================");
 const importMap = JSON.parse(fs.readFileSync(importMapFilePath, { encoding:'utf8', flag:'r' }));
 
