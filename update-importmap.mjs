@@ -3,8 +3,11 @@ import fs from "fs";
 import path from "path";
 
 fs.readdirSync(path.resolve(process.cwd())).forEach(file => console.log(file));
-
 const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
+console.log("=======================================");
+fs.readdirSync(importMapFilePath).forEach(file => console.log(file));
+console.log("=======================================");
+
 console.log("=======================================");
 console.log(importMapFilePath);
 console.log(fs.lstatSync(importMapFilePath).isDirectory())
